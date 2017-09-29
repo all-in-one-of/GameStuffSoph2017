@@ -57,12 +57,14 @@
      <Compile Include="Assets\Scripts\DestroyScript.cs" />
      <Compile Include="Assets\Scripts\DropScript.cs" />
      <Compile Include="Assets\Scripts\END.cs" />
+     <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\FireInput.cs" />
      <Compile Include="Assets\Scripts\FlipCharacter.cs" />
      <Compile Include="Assets\Scripts\LightScript.cs" />
      <Compile Include="Assets\Scripts\LoadScript.cs" />
      <Compile Include="Assets\Scripts\MoveCharacter.cs" />
      <Compile Include="Assets\Scripts\MoveInputs.cs" />
+     <Compile Include="Assets\Scripts\PatrollingEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\PushScript.cs" />
      <Compile Include="Assets\Scripts\ReCentering.cs" />
