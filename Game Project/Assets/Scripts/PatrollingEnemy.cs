@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class PatrollingEnemy : MonoBehaviour {
 
+private NavMeshAgent agent;
+private Transform towardsMe;
+public Transform InitialTowards;
 
-public int direction = 1;
-public float speed;
 
-
-
+	void Start(){
+		agent = GetComponent<NavMeshAgent>();
+		towardsMe = InitialTowards;
+		Switch.newLocation = newLocationHandler;
+	}
 	void Update(){	
-		// transform.position = Vector3.MoveTowards(meme.transform.position, point2.position, movespeed);
-		transform.Translate(Vector3.forward*speed*direction*Time.deltaTime);
+			agent.destination = towardsMe.position;
+	}
+
+	void OnTriggerEnter(){
 
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		if(other.tag == "berry"){
-		if(direction == 1){
-			direction = -1;
-		}
-		else{
-			direction = 1;
-		}
-		}
+
+	void newLocationHandler(int _int){
+
 	}
+
 }

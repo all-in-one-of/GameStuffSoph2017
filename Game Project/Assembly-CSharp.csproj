@@ -53,17 +53,25 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AnimateCharacter.cs" />
      <Compile Include="Assets\Scripts\Byebear.cs" />
+     <Compile Include="Assets\Scripts\ChaseMe.cs" />
      <Compile Include="Assets\Scripts\DestroyOthers.cs" />
      <Compile Include="Assets\Scripts\DestroyScript.cs" />
      <Compile Include="Assets\Scripts\DropScript.cs" />
      <Compile Include="Assets\Scripts\END.cs" />
+     <Compile Include="Assets\Scripts\Enemy2.cs" />
+     <Compile Include="Assets\Scripts\EnemyInWater.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\FireInput.cs" />
      <Compile Include="Assets\Scripts\FlipCharacter.cs" />
+     <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\LightScript.cs" />
      <Compile Include="Assets\Scripts\LoadScript.cs" />
+     <Compile Include="Assets\Scripts\MakeKinematic.cs" />
      <Compile Include="Assets\Scripts\MoveCharacter.cs" />
      <Compile Include="Assets\Scripts\MoveInputs.cs" />
+     <Compile Include="Assets\Scripts\MovingPlatforms.cs" />
+     <Compile Include="Assets\Scripts\Mud.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\PatrollingEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayButton.cs" />
      <Compile Include="Assets\Scripts\PushScript.cs" />
@@ -71,8 +79,11 @@
      <Compile Include="Assets\Scripts\ReSpawnPlatforms.cs" />
      <Compile Include="Assets\Scripts\RespawnScript.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
+     <Compile Include="Assets\Scripts\StaticVars.cs" />
+     <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\Scripts\UnlockDoor.cs" />
      <Compile Include="Assets\Scripts\WallJump.cs" />
+     <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\WeaponClass.cs" />
      <Compile Include="Assets\Scripts\ZeldaStyle.cs" />
  <Reference Include="UnityEngine.UI">

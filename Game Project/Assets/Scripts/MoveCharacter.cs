@@ -9,24 +9,16 @@ public class MoveCharacter : MonoBehaviour {
 
 
 	CharacterController cc;
-
 	Vector3 tempMove; //coordinate in 3d space.
-
-	public float speed = 5;
-    public float gravity = 1;
-    public float jumpHeight = 100;
-
+	float speed;
+	float gravity;
+    float jumpHeight;
 	public static int jumpnum = 0;
-
 	public float runspeed = 20;
-
+	public float normalspeed = 10;
 	public bool UpDown = true;
-
-	public float Vspeed = 1;
-
-	Vector3 tempPos;
-
-  
+	public bool underwater = false;
+	Vector3 tempPos;  
     void Start () {
 		cc = GetComponent<CharacterController>();
 		MoveInputs.JumpAction = Jump;
@@ -34,98 +26,76 @@ public class MoveCharacter : MonoBehaviour {
 		MoveInputs.ZeldaAction += Zelda;
 		MoveInputs.ZeldaTWO = Zelda2;
 		MoveInputs.ZeldaTHREE = Zelda3;
-		RespawnScript.Recenter = Centering;
+		// RespawnScript.Recenter = Centering;
 		MoveInputs.ZeldaFour = Zelda4;
-
-
-		// PlayButton.Play += OnPlay;
+		Water.SendSpeed = WaterMovement;
+		speed = 10;
+		gravity = StaticVars.gravity;
+		Mud.InMud = InMud;
+		jumpHeight = 0.35f;
 	}
-
-	// void OnPlay () {
-	// 		MoveInputs.JumpAction = Jump;
-	// 		MoveInputs.KeyAction += Move;
-	// 		PlayButton.Play -= OnPlay;
-	// }
-	
 	void Jump () {
-		if(cc.isGrounded || jumpnum < 1){
+		if(cc.isGrounded || jumpnum < 1 || (underwater == true)){
 			tempMove.y = jumpHeight;
 			jumpnum++;
-			if(cc.isGrounded){
+			if(cc.isGrounded ){
 				jumpnum = 0;
 			}
 		}
 	}
-
-
+	private void WaterMovement(float _speed, float _gravity, bool _jumping){
+		speed = _speed;
+		gravity = _gravity;
+		underwater = _jumping;
+		jumpnum = 0;
+	}
 	void Move (float _movement){
-		// gravity
 		if(cc.isGrounded == true){
 			gravity = 0;
 		}
-		else{
-			gravity = 1;
+		else if (underwater == true){
+			gravity = StaticVars.waterGravity;
 		}
+		else {
+			gravity = StaticVars.gravity;
+		}
+				if(Input.GetKeyDown(KeyCode.LeftShift) && cc.isGrounded && (underwater == false)){
+					speed = StaticVars.RunSpeed;
 
-				if(Input.GetKeyDown(KeyCode.LeftShift) && cc.isGrounded){
-					speed = runspeed;
 				}
-				if(Input.GetKeyUp(KeyCode.LeftShift)){
-					speed = 10;
+				if(Input.GetKeyUp(KeyCode.LeftShift) && (underwater == false)){
+					speed = StaticVars.playerSpeed;
 				}
-
-
-				// ACTUALLY IMPORTANT STUFF
 		tempMove.y -= gravity * Time.deltaTime;
-		// walkspeed
 		tempMove.x = _movement*speed*Time.deltaTime;
-		cc.Move(tempMove);
-		
+		cc.Move(tempMove);		
 	}
-
 	void Zelda (float _moving){
 		tempMove.z = _moving*speed*Time.deltaTime;
 	}
-
 	void Zelda2 ()
 	{
 
-			// if(UpDown == true)
-			// {
-				// tempMove.z = Vspeed;
 				tempPos = transform.position;
 				tempPos.z = 1;
-				transform.position = tempPos;
-			// 	UpDown = false;
-			// }
-
-		
+				transform.position = tempPos;		
 	}
 	void Zelda3 ()
 	{
-
-			// if(UpDown == false)
-			// {
-				// tempMove.z = (-1)*Vspeed;
 				tempPos = transform.position;
 				tempPos.z = 0;
-				transform.position = tempPos;
-			// 	UpDown = true;
-			// } 
-
-		
+				transform.position = tempPos;		
 	}
-
 	void Zelda4 (){
 				tempPos = transform.position;
 				tempPos.z = -1;
 				transform.position = tempPos;
 	}
-
-	void Centering(){
-		UpDown = true;
+	// void Centering(){
+	// 	UpDown = true;
+	// }
+	void InMud (float _jumpheight, float _runspeed){
+		jumpHeight = _jumpheight;
+		speed = _runspeed;
 	}
-
-
-
 }

@@ -8,15 +8,12 @@ public class RespawnScript : MonoBehaviour {
 
 	public Transform player;
 	public Transform SpawnPoint;
-
-	public static Action StopMove;
-	public static Action StartMove;
 	public static Action deathcount;
 	public static int deaths = 0;
 
 	public Text Deathtext;
 	public bool doit = true;
-	public static Action Recenter;
+	// public static Action Recenter;
 	
 
 
@@ -33,16 +30,13 @@ public class RespawnScript : MonoBehaviour {
 
 	void Startagain (){
 				player.transform.position = SpawnPoint.transform.position;
-				Recenter();
+				// Recenter();
 				deaths++;
 				Invoke("heydeadman", 1);
-
-				// deathtext.text = "deaths: " + DestroyScript.berry;
-				// StartMove();
 	}
 				void heydeadman (){
-					Deathtext.text = "Deaths: " + RespawnScript.deaths;
 					doit = true;
+					Deathtext.text = "Deaths: " + RespawnScript.deaths;
 				}
 
 }

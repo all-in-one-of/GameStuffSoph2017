@@ -25,9 +25,9 @@ TagManager:
   - Walkables/hitables
   - Interactables
   - Light Puzzles
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - EnemyTriggers
   - 
   - 
   - 
