@@ -15,7 +15,6 @@ public Transform InitialTowards;
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 		towardsMe = InitialTowards;
-		Switch.newLocation = newLocationHandler;
 	}
 	void Update(){	
 			agent.destination = towardsMe.position;

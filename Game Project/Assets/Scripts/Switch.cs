@@ -5,13 +5,13 @@ using System;
 
 public class Switch : MonoBehaviour {
 
-	public static Action<int> newLocation;
-	public int newLocationNumber;
+	public static Action<Transform> newLocation;
+	public Transform player;
 
 
 	void OnTriggerEnter()
 	{
-		newLocation(newLocationNumber);		
+		newLocation(player);		
 	}
 
 
