@@ -1,4 +1,4 @@
-WindowsStandalone
+WebGL
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BuyGold
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.EnemyScriptv2
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Enemy2
