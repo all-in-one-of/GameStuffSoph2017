@@ -8,7 +8,7 @@ public class MovingPlatforms : MonoBehaviour {
 public Transform Spot1;
 public Transform Spot2;
 
-public Transform towardsMe;
+private Transform towardsMe;
 public float speed;
 public int location = 1;
 public float platformTime;

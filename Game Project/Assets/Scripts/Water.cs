@@ -11,7 +11,7 @@ public class Water : MonoBehaviour {
 	{
 
 			if (other.tag == "Player"){
-		SendSpeed(StaticVars.waterSpeed, StaticVars.waterGravity, true);	
+		SendSpeed(GameData.Instance.waterSpeed, GameData.Instance.waterSpeed, true);	
 		}
 
 	}

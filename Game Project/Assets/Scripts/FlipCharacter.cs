@@ -10,20 +10,17 @@ Quaternion myRotate;
 Vector3 rotValue;
 	// Use this for initialization
 	void Start () {
-		PlayButton.Play += OnPlay;
+		MoveInputs.flipAction += Flip;
+		rotValue.y = 90;
 	}
 	
-	void OnPlay () {
-		MoveInputs.KeyAction += Flip;
-		PlayButton.Play -= OnPlay;
-	}
-	private void Flip(float obj)
+	void Flip(float obj)
 	{
 		if(obj > 0)
-			rotValue.y = 0;
+			rotValue.y = 90;
 
 		if(obj < 0)
-			rotValue.y = 180;
+			rotValue.y = -90;
 
 		myRotate.eulerAngles = rotValue;
 		transform.rotation = myRotate;

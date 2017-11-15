@@ -2,18 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
+
+[RequireComponent(typeof(NavMeshAgent))]
 
 public class EnemyScript : MonoBehaviour {
 
 	public float speed;
+	private NavMeshAgent agent;
+	private Transform towardsMe;
 	public Transform target;	
 	void Start () {
-			// LightScript.Moving = Movetowards;	
-	}
-	void Movetowards (){
-			print("shouldbemoving?");
-		float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+			agent = GetComponent<NavMeshAgent>();
+			towardsMe = target;
+			SendToEnemy.sendMe = newTarget;	
+			SendToEnemy.reset = Reset;
 	}
 
+	void newTarget (Transform _transform){
+		towardsMe = _transform;
+	}
+
+	void Update(){
+		agent.destination = towardsMe.position;
+	}
+
+	void Reset (){
+		towardsMe = target;
+	}
 }

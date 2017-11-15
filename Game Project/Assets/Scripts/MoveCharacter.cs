@@ -8,7 +8,7 @@ using System;
 public class MoveCharacter : MonoBehaviour {
 
 
-	CharacterController cc;
+	public static CharacterController cc;
 	Vector3 tempMove; //coordinate in 3d space.
 	float speed;
 	float gravity;
@@ -17,22 +17,30 @@ public class MoveCharacter : MonoBehaviour {
 	public float runspeed = 20;
 	public float normalspeed = 10;
 	public bool UpDown = true;
-	public bool underwater = false;
+	public static bool underwater = false;
+	private Vector3 ZLock;
 	Vector3 tempPos;  
+	public int Direction;
+	public static Action GroundedAction;
+	public static bool Grounded = true;
+	public static bool Runner;
+
     void Start () {
 		cc = GetComponent<CharacterController>();
 		MoveInputs.JumpAction = Jump;
 		MoveInputs.KeyAction += Move;
 		MoveInputs.ZeldaAction += Zelda;
-		MoveInputs.ZeldaTWO = Zelda2;
-		MoveInputs.ZeldaTHREE = Zelda3;
-		// RespawnScript.Recenter = Centering;
-		MoveInputs.ZeldaFour = Zelda4;
 		Water.SendSpeed = WaterMovement;
 		speed = 10;
 		gravity = StaticVars.gravity;
 		Mud.InMud = InMud;
 		jumpHeight = 0.35f;
+	}
+	void OnDisable()
+	{
+		MoveInputs.JumpAction -= Jump;
+		MoveInputs.KeyAction -= Move;
+		MoveInputs.ZeldaAction -= Zelda;
 	}
 	void Jump () {
 		if(cc.isGrounded || jumpnum < 1 || (underwater == true)){
@@ -50,50 +58,43 @@ public class MoveCharacter : MonoBehaviour {
 		jumpnum = 0;
 	}
 	void Move (float _movement){
+
+		tempPos = transform.position;
+		tempPos.z = Direction;
+		transform.position = tempPos;
+		if(cc.isGrounded == false){
+			Grounded = false;
+		}
 		if(cc.isGrounded == true){
 			gravity = 0;
+			Grounded = true;
 		}
 		else if (underwater == true){
 			gravity = StaticVars.waterGravity;
 		}
 		else {
+
 			gravity = StaticVars.gravity;
 		}
 				if(Input.GetKeyDown(KeyCode.LeftShift) && cc.isGrounded && (underwater == false)){
 					speed = StaticVars.RunSpeed;
+					Runner = true;
 
 				}
 				if(Input.GetKeyUp(KeyCode.LeftShift) && (underwater == false)){
 					speed = StaticVars.playerSpeed;
+					Runner = false;
 				}
 		tempMove.y -= gravity * Time.deltaTime;
 		tempMove.x = _movement*speed*Time.deltaTime;
 		cc.Move(tempMove);		
 	}
-	void Zelda (float _moving){
-		tempMove.z = _moving*speed*Time.deltaTime;
-	}
-	void Zelda2 ()
-	{
 
-				tempPos = transform.position;
-				tempPos.z = 1;
-				transform.position = tempPos;		
+	void Zelda(int _int){
+		Direction = _int;
 	}
-	void Zelda3 ()
-	{
-				tempPos = transform.position;
-				tempPos.z = 0;
-				transform.position = tempPos;		
-	}
-	void Zelda4 (){
-				tempPos = transform.position;
-				tempPos.z = -1;
-				transform.position = tempPos;
-	}
-	// void Centering(){
-	// 	UpDown = true;
-	// }
+
+
 	void InMud (float _jumpheight, float _runspeed){
 		jumpHeight = _jumpheight;
 		speed = _runspeed;

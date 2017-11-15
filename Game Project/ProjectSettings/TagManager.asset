@@ -22,18 +22,18 @@ TagManager:
   - 
   - 
   - Deathzones
-  - Walkables/hitables
-  - Interactables
+  - Interactables/triggers
+  - Interactables/walkables
   - Light Puzzles
   - Player
   - Enemies
   - EnemyTriggers
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Interactables/objects
+  - NonInteractables/triggers
+  - Enemies/only hit player
+  - BackGroundObjects
+  - Interactables/NewWalkables
+  - Player/Model
   - 
   - 
   - 

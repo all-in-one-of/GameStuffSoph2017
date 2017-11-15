@@ -12,31 +12,30 @@ public class RespawnScript : MonoBehaviour {
 	public static int deaths = 0;
 
 	public Text Deathtext;
+	public bool Enemy = true;
 	public bool doit = true;
+	public static Action RagDoll;
+	public static Action SolidAgain;
 	// public static Action Recenter;
 	
 
 
-	void OnTriggerEnter(Collider TheCollision){
+	void OnTriggerEnter(Collider other){
+		// if(Enemy == true && doit == true){
+		// 	doit = false;
+		// 	StartCoroutine(WaitASecond());
+		// } else if (Enemy == false){
+   	 	other.transform.position = SpawnPoint.transform.position; }
+		}
 
-		if(TheCollision.tag == "Player" && doit == true){
-				doit = false;
-			Invoke("Startagain", 0);
-			
+	// IEnumerator WaitASecond (){
+	// 	RagDoll();
+	// 	yield return new WaitForSeconds(2);
+	// 	SolidAgain();
+	// 	player.transform.position = SpawnPoint.transform.position;
+	// 	doit = true;
 
-			}
-		
-	}
+	// 	}
+	// }
 
-	void Startagain (){
-				player.transform.position = SpawnPoint.transform.position;
-				// Recenter();
-				deaths++;
-				Invoke("heydeadman", 1);
-	}
-				void heydeadman (){
-					doit = true;
-					Deathtext.text = "Deaths: " + RespawnScript.deaths;
-				}
 
-}
