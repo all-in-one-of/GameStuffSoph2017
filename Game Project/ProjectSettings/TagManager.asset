@@ -12,6 +12,7 @@ TagManager:
   - key
   - boulder
   - Platform
+  - dinner
   layers:
   - Default
   - TransparentFX

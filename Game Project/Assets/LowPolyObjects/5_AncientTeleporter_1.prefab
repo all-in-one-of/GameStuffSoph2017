@@ -105,6 +105,8 @@ GameObject:
   - component: {fileID: 4709860348161840}
   - component: {fileID: 33342547999031892}
   - component: {fileID: 23197971205543954}
+  - component: {fileID: 65231279258880774}
+  - component: {fileID: 114935388628411306}
   m_Layer: 0
   m_Name: pCube6
   m_TagString: Untagged
@@ -213,9 +215,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843006305652564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.017548, y: 8.017704, z: 2.13762}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1902.8765, y: -4630.799, z: 31.970936}
+  m_LocalScale: {x: 17.281588, y: 17.281588, z: 17.281588}
   m_Children:
   - {fileID: 4838105216024318}
   - {fileID: 4786560443261170}
@@ -460,6 +462,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304104187925594}
   m_Mesh: {fileID: 4300000, guid: 62baaacf0fb4ac14d80a9ee58d03c39b, type: 3}
+--- !u!65 &65231279258880774
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907806669854304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.19635499, z: 1}
+  m_Center: {x: -0.000007642263, y: 0.036067132, z: 5.0047434e-13}
 --- !u!95 &95466229643274188
 Animator:
   serializedVersion: 3
@@ -477,3 +491,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114935388628411306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907806669854304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053dfbf711b41424f947127c299d4a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  SpawnPoint: {fileID: 0}
+  Deathtext: {fileID: 0}
+  Enemy: 1
+  doit: 1

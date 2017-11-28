@@ -46,7 +46,6 @@ public class InventoryHandler : MonoBehaviour {
 				fish++;
 			break;
 		}
-		print("wood is " + wood);
 		InventoryText();
 		
 	}
