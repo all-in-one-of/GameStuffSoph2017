@@ -6,7 +6,6 @@
  <element id="10" elementName="Chrystel" elementFolder="Chrystel" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="13" elementName="white" elementFolder="white" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="14" elementName="OB2" elementFolder="OB2" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
- <element id="15" elementName="Drawing_1" elementFolder="Drawing_1" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="16" elementName="Mid" elementFolder="Mid" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="17" elementName="Front" elementFolder="Front" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="18" elementName="SuperFront" elementFolder="SuperFront" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>

@@ -1064,10 +1064,6 @@
   <Drawing Key="" Name="36" Version="1"/>
   <Drawing Key="" Name="37" Version="1"/>
  </Element>
- <Element Name="Drawing_1" ID="15" Folder="Drawing_1">
-  <Drawing Key="" Name="1" Version="1"/>
-  <Drawing Key="" Name="2" Version="1"/>
- </Element>
  <Element Name="Mid" ID="16" Folder="Mid">
   <Drawing Key="" Name="1" Version="1"/>
   <Drawing Key="" Name="2" Version="1"/>
