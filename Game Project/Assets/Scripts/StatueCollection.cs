@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class StatueCollection : MonoBehaviour {
 
-	public static Action Counter;
+	public static UnityAction Counter;
 	public GameObject finalStatue;
 	void OnTriggerEnter()
 	{

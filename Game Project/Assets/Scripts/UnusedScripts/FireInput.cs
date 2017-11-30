@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 public class FireInput : MonoBehaviour {
 
-public static Action FireAction;
-public static Action StopAction;
+public static UnityAction FireAction;
+public static UnityAction StopAction;
 
 public void Fire(){
 	FireAction();

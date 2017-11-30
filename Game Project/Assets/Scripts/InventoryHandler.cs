@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class InventoryHandler : MonoBehaviour {
 
@@ -10,7 +10,7 @@ public class InventoryHandler : MonoBehaviour {
 	public static int berries = 0;
 	public static int fish = 0;
 	public static int inventory = 0;
-	public static Action InventoryText;
+	public static UnityAction InventoryText;
 
 	void Start(){
 		Pickupanddrop.sendNumber = InventoryHandling;

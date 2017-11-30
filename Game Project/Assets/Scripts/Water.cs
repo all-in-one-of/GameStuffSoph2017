@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 public class Water : MonoBehaviour {
 
-	public static Action<float, float, bool> SendSpeed;
+	public static UnityAction<float, float, bool> SendSpeed;
 
 
 	void OnTriggerEnter(Collider other)

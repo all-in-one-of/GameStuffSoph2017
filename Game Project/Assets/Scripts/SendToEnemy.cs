@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class SendToEnemy : MonoBehaviour {
 
 	public Transform newTarget;
-	public static Action<Transform> sendMe;
-	public static Action reset;
+	public static UnityAction<Transform> sendMe;
+	public static UnityAction reset;
 	void OnTriggerEnter(){
 		sendMe(newTarget);
 	}

@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class MakeObjectAppear : MonoBehaviour {
 
 	public int ResourceNeeded;
 	public int NumberNeeded;
 	public GameObject MakeMeAppear;
-	public static Action<int> SubtractMe;
+	public static UnityAction<int> SubtractMe;
 	public GameObject notEnoughText;
-	public static Action inventoryText;
+	public static UnityAction inventoryText;
 	public bool Appeared = false;
 	void OnTriggerStay()
 	{

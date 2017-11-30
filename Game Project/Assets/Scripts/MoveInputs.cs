@@ -1,20 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class MoveInputs : MonoBehaviour {
 
 	public float runTime = 0.01f;
-	public static Action<float> KeyAction;
-	public static Action<float> flipAction;	
-	public static Action JumpAction;
+	public static UnityAction<float> KeyAction;
+	public static UnityAction<float> flipAction;	
+	public static UnityAction JumpAction;
 
 	public bool canPlay = true;
 
-	public static Action<int> ZeldaAction;
-	public static Action crafting;
-	// public static Action jumper;
+	public static UnityAction<int> ZeldaAction;
+	public static UnityAction crafting;
+	// public static UnityAction jumper;
 	void Start(){
 		StartCoroutine(RunInput());
 	}

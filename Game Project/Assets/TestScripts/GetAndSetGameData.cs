@@ -1,4 +1,4 @@
-﻿using System;
+﻿using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +7,7 @@ using UnityEngine;
 public class GetAndSetGameData : MonoBehaviour {
 	public Data data;
 
-	public static Action<int> UpdateGold;
+	public static UnityAction<int> UpdateGold;
 
 	void Awake()
 	{

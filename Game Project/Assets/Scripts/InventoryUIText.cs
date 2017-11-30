@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using UnityEngine.Events;
 public class InventoryUIText : MonoBehaviour {
 
 	public Text TextObject;

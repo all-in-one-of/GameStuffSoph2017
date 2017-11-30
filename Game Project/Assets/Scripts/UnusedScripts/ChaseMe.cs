@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class ChaseMe : MonoBehaviour {
-	public static Action<Transform> newLocation;
+	public static UnityAction<Transform> newLocation;
 	public Transform newSpot;
 	public Transform ReturnSpot;
 

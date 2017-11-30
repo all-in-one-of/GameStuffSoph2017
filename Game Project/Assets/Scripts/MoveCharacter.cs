@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -21,7 +21,7 @@ public class MoveCharacter : MonoBehaviour {
 	private Vector3 ZLock;
 	Vector3 tempPos;  
 	public int Direction;
-	public static Action GroundedAction;
+	public static UnityAction GroundedAction;
 	public static bool Grounded = true;
 	public static bool Runner;
 

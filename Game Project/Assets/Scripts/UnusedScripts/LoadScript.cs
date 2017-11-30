@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class LoadScript : MonoBehaviour {
 
 	public string scene;
 
-	public static Action EndButtons;
+	public static UnityAction EndButtons;
 	public GameObject Player;
 	public Transform SpawnPoint;
 

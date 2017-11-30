@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 public class Pickupanddrop : MonoBehaviour {
 
 	public Transform stickToMe; //game object (child of character) where the item will anchor to.
 	public GameObject disappearingObject; // your item that you will hold but it will disappear.
 	private int objecting = 1;
-	public static Action<int> sendNumber;
+	public static UnityAction<int> sendNumber;
 	public int objectNumber = 0;
 	public bool myBool = true;
 	void OnTriggerEnter()
