@@ -1,6 +1,6 @@
 ToonBoomAnimationInc PaletteFile 2
-Solid    Black                      0x08d47e058ca00846   0   0   0 255
 Solid    White                      0x08d47e058ca00848 255 255 255 255
+Solid    Black                      0x08d47e058ca00846   0   0   0 255
 Solid    "Red Sash"                 0x08d47e058ca0084a 143  41  11 255
 Solid    Green                      0x08d47e058ca0084c   0 255   0 255
 Solid    Hair                       0x08d47e058ca0084e   0   0   0 255
