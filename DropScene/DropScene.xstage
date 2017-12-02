@@ -3144,7 +3144,7 @@
      <elementSeq exposures="459-460" val="135" id="4"/>
      <elementSeq exposures="461" val="136" id="4"/>
     </column>
-    <column type="0" name="ATV-08D47E058CA6731C" display="false" displayOrder="18" width="100" anonymous="true" id="8">
+    <column type="0" name="ATV-08D47E058CA6731C" displayOrder="18" width="100" anonymous="true" id="8">
      <elementSeq exposures="1" val="1" id="8"/>
      <elementSeq exposures="2" val="2" id="8"/>
      <elementSeq exposures="3" val="3" id="8"/>
@@ -4992,7 +4992,7 @@
      <elementSeq exposures="171-174" val="65" id="22"/>
      <elementSeq exposures="175-178" val="66" id="22"/>
      <elementSeq exposures="179-182" val="67" id="22"/>
-     <elementSeq exposures="183-184,186" val="68" id="22"/>
+     <elementSeq exposures="183-185,186-187" val="68" id="22"/>
      <elementSeq exposures="188-190" val="69" id="22"/>
      <elementSeq exposures="191-194" val="70" id="22"/>
      <elementSeq exposures="195-198" val="71" id="22"/>
@@ -5107,7 +5107,7 @@
      <elementSeq exposures="171-174" val="65" id="23"/>
      <elementSeq exposures="175-178" val="66" id="23"/>
      <elementSeq exposures="179-182" val="67" id="23"/>
-     <elementSeq exposures="183-184,186" val="68" id="23"/>
+     <elementSeq exposures="183-185,186-187" val="68" id="23"/>
      <elementSeq exposures="188-190" val="69" id="23"/>
      <elementSeq exposures="191-194" val="70" id="23"/>
      <elementSeq exposures="195-198" val="71" id="23"/>
@@ -5222,7 +5222,7 @@
      <elementSeq exposures="171-174" val="69" id="24"/>
      <elementSeq exposures="175-178" val="70" id="24"/>
      <elementSeq exposures="179-182" val="71" id="24"/>
-     <elementSeq exposures="183-184,186" val="72" id="24"/>
+     <elementSeq exposures="183-185,186-187" val="72" id="24"/>
      <elementSeq exposures="188-190" val="73" id="24"/>
      <elementSeq exposures="191-194" val="74" id="24"/>
      <elementSeq exposures="195-198" val="75" id="24"/>
@@ -5310,7 +5310,7 @@
      <elementSeq exposures="171-174" val="38" id="25"/>
      <elementSeq exposures="175-178" val="39" id="25"/>
      <elementSeq exposures="179-182" val="40" id="25"/>
-     <elementSeq exposures="183-184,186" val="41" id="25"/>
+     <elementSeq exposures="183-185,186-187" val="41" id="25"/>
      <elementSeq exposures="188-190" val="42" id="25"/>
      <elementSeq exposures="191-194" val="43" id="25"/>
      <elementSeq exposures="195-198" val="44" id="25"/>
@@ -7460,7 +7460,7 @@
      <module type="READ" name="face" pos="0,0,0" publishUnderTab="face">
       <options>
        <version val="1"/>
-       <collapsed val="false"/>
+       <collapsed val="true"/>
       </options>
       <attrs>
        <enable3d val="false"/>
