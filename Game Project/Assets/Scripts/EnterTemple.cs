@@ -9,6 +9,8 @@ public class EnterTemple : MonoBehaviour {
 	public GameObject Torch;
 	public GameObject MainLights;
 	public GameObject TempleLights;
+	public GameObject ForestBackground;
+	public GameObject TempleBackground;
 	void OnTriggerStay(){
 		if(Input.GetKeyDown(KeyCode.R)){
 			print("heyworking");
@@ -16,6 +18,8 @@ public class EnterTemple : MonoBehaviour {
 			Torch.SetActive(true);
 			MainLights.SetActive(false);
 			TempleLights.SetActive(true);
+			ForestBackground.SetActive(false);
+			TempleBackground.SetActive(true);
 		}
 	}
 }

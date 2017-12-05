@@ -13,6 +13,11 @@ Vector3 rotValue;
 		MoveInputs.flipAction += Flip;
 		rotValue.y = 90;
 	}
+
+	void OnDisable()
+	{
+		MoveInputs.flipAction -= Flip;
+	}
 	
 	void Flip(float obj)
 	{
