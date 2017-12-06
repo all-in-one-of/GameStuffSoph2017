@@ -7,20 +7,22 @@ public class Water : MonoBehaviour {
 	public static UnityAction<float, float, bool> SendSpeed;
 
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter()
 	{
 
-			if (other.tag == "Player"){
+			
 		SendSpeed(GameData.Instance.waterSpeed, GameData.Instance.waterSpeed, true);	
-		}
+		FindObjectOfType<AudioManager>().PlaySounds("splash");
+		
 
 	}
 
-	void OnTriggerExit(Collider other)
+	void OnTriggerExit()
 	{
-		if(other.tag == "Player"){
+
 		SendSpeed(StaticVars.playerSpeed, StaticVars.gravity, false);
-		}
+
+	
 	}
 
 }

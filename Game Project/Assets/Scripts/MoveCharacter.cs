@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using System;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -14,14 +14,10 @@ public class MoveCharacter : MonoBehaviour {
 	float gravity;
     float jumpHeight;
 	public static int jumpnum = 0;
-	public float runspeed = 20;
-	public float normalspeed = 10;
-	public bool UpDown = true;
 	public static bool underwater = false;
 	private Vector3 ZLock;
 	Vector3 tempPos;  
 	public int Direction;
-	public static UnityAction GroundedAction;
 	public static bool Grounded = true;
 	public static bool Runner;
 
@@ -46,6 +42,7 @@ public class MoveCharacter : MonoBehaviour {
 		if(cc.isGrounded || jumpnum < 1 || (underwater == true)){
 			tempMove.y = jumpHeight;
 			jumpnum++;
+			FindObjectOfType<AudioManager>().PlaySounds("Jump");
 			if(cc.isGrounded ){
 				jumpnum = 0;
 			}

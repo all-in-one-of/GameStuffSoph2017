@@ -21,6 +21,7 @@ public class MakeObjectAppear : MonoBehaviour {
 							InventoryHandler.wood = (InventoryHandler.wood - NumberNeeded);
 							DoingWork();
 							inventoryText();
+							FindObjectOfType<AudioManager>().PlaySounds("crafting");
 						} else { Regret(); }
 					break;
 					case 2: // honey
