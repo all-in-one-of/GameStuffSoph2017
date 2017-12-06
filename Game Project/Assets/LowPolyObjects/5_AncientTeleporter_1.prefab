@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4786560443261170}
   - component: {fileID: 33264215836098886}
   - component: {fileID: 23473140112007970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4693305999964430}
   - component: {fileID: 33012709177027854}
   - component: {fileID: 23606913107581040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4088043126413136}
   - component: {fileID: 33873016589748202}
   - component: {fileID: 23426998248066334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4838105216024318}
   - component: {fileID: 33942362994733242}
   - component: {fileID: 23232226007273820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950398757227308}
   - component: {fileID: 95466229643274188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 5_AncientTeleporter_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 23197971205543954}
   - component: {fileID: 65231279258880774}
   - component: {fileID: 114935388628411306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4135476124810180}
   - component: {fileID: 33098797934325710}
   - component: {fileID: 23556490849154930}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,9 +215,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843006305652564}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1902.8765, y: -4630.799, z: 31.970936}
-  m_LocalScale: {x: 17.281588, y: 17.281588, z: 17.281588}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.4616683, y: -288.59998, z: 378.05002}
+  m_LocalScale: {x: 0.5281181, y: 0.52811795, z: 0.5281181}
   m_Children:
   - {fileID: 4838105216024318}
   - {fileID: 4786560443261170}

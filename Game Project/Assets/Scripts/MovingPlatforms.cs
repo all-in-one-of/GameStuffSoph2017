@@ -14,7 +14,9 @@ public int location = 1;
 public float platformTime;
 
 	void Start(){
-		StartCoroutine(movingPlatform());		
+		StartCoroutine(movingPlatform());
+
+        		
 	}
 	void Update(){	
 				float step = speed * Time.deltaTime;
@@ -23,11 +25,14 @@ public float platformTime;
 	void newLocationHandler(int _location){
 		location = _location;
 		NewLocation();
+		AudioSource audio = GetComponent<AudioSource>();
+		audio.Play();
 	}
 	IEnumerator movingPlatform(){
+
 		newLocationHandler(1);
 		yield return new WaitForSeconds(platformTime);
-		print("once");
+		// audio.Play();
 		newLocationHandler(2);
 		yield return new WaitForSeconds(platformTime);
 		StartCoroutine(movingPlatform());

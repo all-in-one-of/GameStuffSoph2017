@@ -29,4 +29,9 @@ public class AudioManager : MonoBehaviour {
 		s.SourceOfNoise.Play(); 
 	// FindObjectOfType<AudioManager>().PlaySounds("nameofsound");
 	}
+
+	public void Pause(string name){
+		Sound s = Array.Find(MySounds, sound => sound.NameOfSound == name);
+		s.SourceOfNoise.Pause(); 
+	}
 }

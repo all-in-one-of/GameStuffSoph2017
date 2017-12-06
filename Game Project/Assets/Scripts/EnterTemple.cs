@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnterTemple : MonoBehaviour {
 
@@ -11,6 +12,10 @@ public class EnterTemple : MonoBehaviour {
 	public GameObject TempleLights;
 	public GameObject ForestBackground;
 	public GameObject TempleBackground;
+	public string TurnOff;
+	public string TurnOff2;
+	public string TurnOn;
+
 	void OnTriggerStay(){
 		if(Input.GetKeyDown(KeyCode.R)){
 			print("heyworking");
@@ -20,6 +25,9 @@ public class EnterTemple : MonoBehaviour {
 			TempleLights.SetActive(true);
 			ForestBackground.SetActive(false);
 			TempleBackground.SetActive(true);
+			FindObjectOfType<AudioManager>().PlaySounds(TurnOn);
+			FindObjectOfType<AudioManager>().Pause(TurnOff);
+			FindObjectOfType<AudioManager>().Pause(TurnOff2);
 		}
 	}
 }
