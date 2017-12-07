@@ -20,22 +20,16 @@ public class RespawnScript : MonoBehaviour {
 	
 
 
-	void OnTriggerEnter(Collider other){
-		// if(Enemy == true && doit == true){
-		// 	doit = false;
-		// 	StartCoroutine(WaitASecond());
-		// } else if (Enemy == false){
-   	 	other.transform.position = SpawnPoint.transform.position; }
+	void OnTriggerEnter(Collider other){			
+		StartCoroutine(Waiting()); 
+	}
+
+	IEnumerator Waiting (){
+		Time.timeScale = 0;
+		yield return new WaitForSecondsRealtime(1);
+		Time.timeScale = 1;
+		player.transform.position = SpawnPoint.transform.position;
 		}
-
-	// IEnumerator WaitASecond (){
-	// 	RagDoll();
-	// 	yield return new WaitForSeconds(2);
-	// 	SolidAgain();
-	// 	player.transform.position = SpawnPoint.transform.position;
-	// 	doit = true;
-
-	// 	}
-	// }
+	}
 
 

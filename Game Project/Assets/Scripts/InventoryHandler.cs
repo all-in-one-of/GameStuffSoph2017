@@ -13,7 +13,7 @@ public class InventoryHandler : MonoBehaviour {
 	public static UnityAction InventoryText;
 
 	void Start(){
-		Pickupanddrop.sendNumber = InventoryHandling;
+		Pickupanddrop.sendNumber += InventoryHandling;
 		MakeObjectAppear.SubtractMe = InventorySubtraction;
 	}
 
