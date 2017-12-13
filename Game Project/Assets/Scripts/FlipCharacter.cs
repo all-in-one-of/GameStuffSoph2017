@@ -8,7 +8,7 @@ public class FlipCharacter : MonoBehaviour {
 Quaternion myRotate;
 
 Vector3 rotValue;
-	// Use this for initialization
+
 	void Start () {
 		MoveInputs.flipAction += Flip;
 		rotValue.y = 90;
@@ -26,7 +26,6 @@ Vector3 rotValue;
 
 		if(obj < 0)
 			rotValue.y = -90;
-
 		myRotate.eulerAngles = rotValue;
 		transform.rotation = myRotate;
 	}

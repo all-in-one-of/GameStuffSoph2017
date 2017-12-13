@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TempleScene.unity
     guid: ddca746888d1b4f4d8fa40d571159e61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: 9cd82e2eb89ab974da20a8605b8d54ba
   - enabled: 1

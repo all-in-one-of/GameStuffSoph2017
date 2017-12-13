@@ -8,10 +8,8 @@ public class AnimController : MonoBehaviour {
 	public Animator bearanims;
 	void Start(){
 		anims = GetComponent<Animator>();
-		// MoveInputs.jumper = jumpAnim;
 		MoveInputs.KeyAction = walking;
 		MakeObjectReplace.eating = eating;
-		// MoveInputs.jumper = jumpAnim;
 	}
 
 	void walking(float _float){
@@ -47,18 +45,8 @@ public class AnimController : MonoBehaviour {
 			anims.SetBool("Underwater", false);
 		}
 	}
-
-	void Running(){
-
-	}
 	void eating (){
 		bearanims.SetBool("Eating", true);
-		print("ok eating stuff");
-	}
-
-	void Update()
-	{
-		print(MoveCharacter.Grounded);
 	}
 }
 

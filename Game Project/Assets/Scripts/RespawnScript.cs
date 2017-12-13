@@ -26,7 +26,7 @@ public class RespawnScript : MonoBehaviour {
 
 	IEnumerator Waiting (){
 		Time.timeScale = 0;
-		yield return new WaitForSecondsRealtime(1);
+		yield return new WaitForSecondsRealtime(.5f);
 		Time.timeScale = 1;
 		player.transform.position = SpawnPoint.transform.position;
 		}

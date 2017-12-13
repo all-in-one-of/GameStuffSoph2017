@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour {
 			sound.SourceOfNoise.pitch = sound.pitch;
 			sound.SourceOfNoise.loop = sound.loop;
 		}
-
 	}
 
 	void Start()
@@ -27,7 +26,6 @@ public class AudioManager : MonoBehaviour {
 	public void PlaySounds (string name){
 		Sound s = Array.Find(MySounds, sound => sound.NameOfSound == name);
 		s.SourceOfNoise.Play(); 
-	// FindObjectOfType<AudioManager>().PlaySounds("nameofsound");
 	}
 
 	public void Pause(string name){
