@@ -6837,7 +6837,7 @@
       <options>
        <disabled val="true"/>
        <version val="1"/>
-       <collapsed val="false"/>
+       <collapsed val="true"/>
       </options>
       <attrs>
        <enable3d val="false"/>
