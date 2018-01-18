@@ -2686,10 +2686,4 @@
   <Drawing Key="" Name="194" Version="1"/>
   <Drawing Key="" Name="195" Version="1"/>
  </Element>
- <Element Name="Human" ID="28" Folder="Human">
-  <Drawing Key="" Name="1" Version="1"/>
- </Element>
- <Element Name="Human_HandsMale_Signature.jpga109f7a8" ID="29" Folder="Human_HandsMale_Signature.jpga109f7a8">
-  <Drawing Key="" Name="1" Version="1"/>
- </Element>
 </SceneVersion>

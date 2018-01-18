@@ -18,6 +18,4 @@
  <element id="25" elementName="Back_1" elementFolder="Back_1" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="26" elementName="Superback" elementFolder="Superback.26" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="27" elementName="face" elementFolder="face" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
- <element id="28" elementName="Human" elementFolder="Human" pixmapFormat="11" scanType="2" fieldChart="12" vectorType="0" rootFolder="elements"/>
- <element id="29" elementName="Human_HandsMale_Signature.jpga109f7a8" elementFolder="Human_HandsMale_Signature.jpga109f7a8" pixmapFormat="11" scanType="2" fieldChart="12" vectorType="0" rootFolder="elements"/>
 </elements>
