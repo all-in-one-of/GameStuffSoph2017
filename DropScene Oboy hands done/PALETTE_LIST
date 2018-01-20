@@ -1,0 +1,4 @@
+ToonBoomAnimationInc PaletteList 1
+palette-library/DropScene LINK "C:/Users/10703355/Desktop/DropHarmony/DropScene/palette-library/DropScene.plt"
+palette-library/penstyle_opacity LINK "C:/Users/10703355/Desktop/DropHarmony/DropScene/palette-library/penstyle_opacity.plt"
+palette-library/BoysDrop LINK "C:/Users/10703355/Desktop/DropHarmony/DropScene/palette-library/BoysDrop.plt"
