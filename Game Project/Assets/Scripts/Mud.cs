@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class Mud : MonoBehaviour {
 
-public static Action<float, float> InMud;
+public static UnityAction<float, float> InMud;
 void OnTriggerEnter(Collider TheCollision){
 		if(TheCollision.tag == "Player"){
 		InMud(0, StaticVars.waterSpeed);

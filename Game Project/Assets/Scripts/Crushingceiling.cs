@@ -13,9 +13,8 @@ public class Crushingceiling : MonoBehaviour {
 		crushingceilingtrigger.moveMeBack = MoveBack;
 	}
 	void moving(){
-			print("moving?");
-			float step = speed * Time.deltaTime;
-        	transform.position = Vector3.MoveTowards(transform.position, towardsMe.position, step);
+		float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, towardsMe.position, step);
 	}
 
 	void MoveBack(){

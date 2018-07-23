@@ -11,12 +11,27 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/bear prototype.unity
     guid: 2a32f8859e9e4fd4b8e4e4c1b534cd61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene 1.unity
     guid: d51d461eb41aa2846861e577ab78af37
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene 2.unity
     guid: d1eeb22e2cc71fd42ad169cf07c76887
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SecretScene.unity
     guid: 78618a4a774fd334494d7f4cb3304c08
+  - enabled: 0
+    path: Assets/Scenes/FinalScene1.unity
+    guid: cc17d79aae7f1e447b81becbeede8767
+  - enabled: 0
+    path: Assets/Scenes/TempleScene.unity
+    guid: ddca746888d1b4f4d8fa40d571159e61
+  - enabled: 0
+    path: Assets/Scenes/StartScene.unity
+    guid: 9cd82e2eb89ab974da20a8605b8d54ba
+  - enabled: 1
+    path: Assets/Scenes/FinalScene2.unity
+    guid: 08df8c9d4a19ee64da7367c76046a6bf
+  - enabled: 0
+    path: Assets/Scenes/TempleScene 1.unity
+    guid: 6dda94904301c354abf1c86a545dded8

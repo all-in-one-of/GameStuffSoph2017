@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class crushingceilingtrigger : MonoBehaviour {
 
 
-	public static Action crush; 
-	public static Action moveMeBack;
+	public static UnityAction crush; 
+	public static UnityAction moveMeBack;
 	void OnTriggerStay()
 	{
 		crush();
